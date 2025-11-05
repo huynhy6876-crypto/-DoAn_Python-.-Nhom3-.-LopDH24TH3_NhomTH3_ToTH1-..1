@@ -127,12 +127,12 @@ def open_main_window():
 
     tk.Button(main, text="BÁN HÀNG", bg="#27ae60", command=lambda: open_sales_window(main), **btn_style).pack(pady=15)
     tk.Button(main, text="QUẢN LÝ NHÂN VIÊN", bg="#3498db", 
-          command=lambda: open_crud_window(main, "NhanVien", 
+          command=lambda: open_crud_window(main, "Nhân Viên", 
           ["ma_nv", "ten_nv", "gioitinh", "dia_chi", "sdt", "chuc_vu"], 
           ["Mã NV", "Họ tên", "Giới tính", "Địa chỉ", "SĐT", "Chức vụ"]), 
           **btn_style).pack(pady=10)
-    tk.Button(main, text="QUẢN LÝ SẢN PHẨM", bg="#e67e22", command=lambda: open_crud_window(main, "SanPham", ["ma_sp", "ten_sp", "loai_sp", "mo_ta", "gia", "so_luong_ton"], ["Mã SP", "Tên SP", "Loại", "Mô tả", "Giá", "Tồn kho"]), **btn_style).pack(pady=10)
-    tk.Button(main, text="QUẢN LÝ KHÁCH HÀNG", bg="#9b59b6", command=lambda: open_crud_window(main, "KhachHang", ["ma_kh", "ten_kh", "dia_chi", "sdt_kh"], ["Mã KH", "Tên KH", "Địa chỉ", "SĐT"]), **btn_style).pack(pady=10)
+    tk.Button(main, text="QUẢN LÝ SẢN PHẨM", bg="#e67e22", command=lambda: open_crud_window(main, "Sản Phẩm", ["ma_sp", "ten_sp", "loai_sp", "mo_ta", "gia", "so_luong_ton"], ["Mã SP", "Tên SP", "Loại", "Mô tả", "Giá", "Tồn kho"]), **btn_style).pack(pady=10)
+    tk.Button(main, text="QUẢN LÝ KHÁCH HÀNG", bg="#9b59b6", command=lambda: open_crud_window(main, "Khách Hàng", ["ma_kh", "ten_kh", "dia_chi", "sdt_kh"], ["Mã KH", "Tên KH", "Địa chỉ", "SĐT"]), **btn_style).pack(pady=10)
 
     main.mainloop()
 
@@ -675,4 +675,5 @@ def open_sales_window(prev):
 
 # ====================== CHẠY CHƯƠNG TRÌNH ======================
 if __name__ == "__main__":
+
     create_login_window()
