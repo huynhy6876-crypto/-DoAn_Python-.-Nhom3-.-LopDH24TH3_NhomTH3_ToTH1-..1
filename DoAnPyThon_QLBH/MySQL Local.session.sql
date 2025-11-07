@@ -26,7 +26,7 @@ CREATE TABLE KhachHang (
     ten_kh VARCHAR(100) NOT NULL,
     sdt VARCHAR(20),
     dia_chi VARCHAR(255),
-    email VARCHAR(100)
+    
 );
 
 CREATE TABLE HoaDon (
@@ -62,9 +62,9 @@ INSERT INTO SanPham VALUES
 ('SP0004', 'Sạc dự phòng 10000mAh', 'Phụ kiện', 'Sạc nhanh', 450000, 20);
 
 INSERT INTO KhachHang VALUES
-('KH0001', 'Phạm Minh Tâm', 'Hải Phòng', '0988123123', 'tam@gmail.com'),
-('KH0002', 'Nguyễn Thu Trang', 'Cần Thơ', '0977456712', 'trang@yahoo.com'),
-('KH0003', 'Lưu Đức Mạnh', 'Đà Nẵng', '0909888777', 'manh@gmail.com');
+('KH0001', 'Phạm Minh Tâm', 'Hải Phòng', '0988123123' ),
+('KH0002', 'Nguyễn Thu Trang', 'Cần Thơ', '0977456712' ),
+('KH0003', 'Lưu Đức Mạnh', 'Đà Nẵng', '0909888777');
 
 INSERT INTO HoaDon VALUES
 ('HD0001', 'KH0001', 'NV0001', '2025-10-28', 2550000),
@@ -87,4 +87,5 @@ SELECT * FROM ChiTietHoaDon;
 DESCRIBE NhanVien;
 
 ALTER TABLE NhanVien CHANGE COLUMN gioi_tinh gioitinh VARCHAR(10);
+
 ALTER TABLE hoadon ADD COLUMN id INT AUTO_INCREMENT PRIMARY KEY;
